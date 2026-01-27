@@ -17,7 +17,7 @@
 
 const user = {
     name: "Alex",
-    greet:function(){
+    greet: function () {
         console.log("Hello, " + this.name);
     }
 };

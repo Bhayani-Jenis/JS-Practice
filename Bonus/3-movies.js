@@ -71,8 +71,6 @@ function highestrated(...args){
 }
 
 highestrated(avg[0],avg[1],avg[2])
-
-
 //Use destructuring to extract the first movie and the rest of the movies into separate variables.
 
 const [first,...rest]=movies

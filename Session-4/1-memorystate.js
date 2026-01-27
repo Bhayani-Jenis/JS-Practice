@@ -8,11 +8,11 @@ const registry = {
 function cloneAndModify(data) {
   // Goal: Create a copy so the original registry isn't changed
   const copy = { ...data };
-  
+
   copy.active.push({ id: 2, name: "Beta" });
   copy.active[0].name = "Gamma";
   copy.version = 2.0;
-  
+
   return copy;
 }
 

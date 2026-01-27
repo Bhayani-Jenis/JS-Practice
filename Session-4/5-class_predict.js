@@ -9,12 +9,12 @@ class Counter {
   }
 
   getCount() {
-    
+
     return this.count;      //it is saperate for all objects
   }
 
   static getStaticCount() {
-    
+
     return this.count;// this in static function refer to the class it self and class.count gives a value of static variable
   }
 }

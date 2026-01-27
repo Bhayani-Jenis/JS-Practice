@@ -4,4 +4,4 @@ const inventory = [
     { name: "Mouse", price: 50, stock: 10 }
 ];
 
-console.log(inventory.filter((x)=>x.stock>0).map((x)=>x.price*x.stock).reduce((acc,total)=>acc+=total));
+console.log(inventory.filter((x) => x.stock > 0).map((x) => x.price * x.stock).reduce((acc, total) => acc += total));
