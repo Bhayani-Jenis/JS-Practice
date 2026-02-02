@@ -79,10 +79,8 @@ const [first,...rest]=movies
 
 //Copy a movie object and add a new property boxOffice without modifying the original object (hint: spread operator).
 const b={...movies[0],boxOffice:"300 cr"}
-// console.log(b);
+console.log(b);
 // console.log(movies[0]);
-
-//
 
 
 

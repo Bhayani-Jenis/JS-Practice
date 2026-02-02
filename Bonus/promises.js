@@ -58,3 +58,42 @@
 
 
 
+async function asyncTask() {
+  console.log('Async Start'); // 2. Synchronous
+  await Promise.resolve(); // Execution pauses here, rest moves to Microtask Queue
+  console.log('Async End'); // 4. Microtask
+}
+
+console.log('Start'); // 1. Synchronous
+
+setTimeout(() => {
+  console.log('Timeout 1'); // 6. Macrotask
+
+  setTimeout(() => {
+    console.log('Timeout 2'); // 10. Macrotask (queued after T1 & T3 runs)
+  }, 0);
+
+  Promise.resolve().then(() => {
+    console.log('Promise 1'); // 7. Microtask (runs before next Macrotask)
+  });
+}, 0);
+
+asyncTask();
+
+Promise.resolve().then(() => {
+  console.log('Promise 2'); // 5. Microtask
+});
+
+setTimeout(() => {
+  console.log('Timeout 3'); // 8. Macrotask
+
+  setTimeout(() => {
+    console.log('Timeout 4'); // 11. Macrotask (queued after T1 & T3 & T2 runs)
+  }, 0);
+
+  Promise.resolve().then(() => {
+    console.log('Promise 2'); // 9. Microtask (runs before next Macrotask)
+  });
+}, 0);
+
+console.log('End');
