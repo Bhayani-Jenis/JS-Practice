@@ -40,14 +40,11 @@ console.log("4");
 
 **Actual Output:**
 ```
-// Run and write the actual order
 // 1,4,3,2
 ```
 
 
 **Explanation:**
 ```
-// Explain the execution order
-
 here first syncronous tasks runs and asyncronous tasks goes to web api and then micro or macro queue so it prints first 1 and 4 than microtask promise it prints 3 and then macrotask queue so it prints 2 at last
 ```
