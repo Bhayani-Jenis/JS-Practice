@@ -1,7 +1,8 @@
 function downloadFile(url,callback){
         setTimeout(()=>{
             console.log(`Download complete:[${url}]`);
-            if(callback)callback();
+            // if(callback)callback();
+            callback?.()
         },3000)
 
 }
